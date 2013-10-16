@@ -1,0 +1,72 @@
+/* Tweak the .post wrapper style */
+.post-template {
+  .post {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    
+    /* Kill that stylish little circle that was on the border, too */
+    &:after {
+      display: none;
+    }
+  }
+  
+  /* Insert some mad padding up in the header for better spacing */
+  .post-header {
+    padding: 60px 0;
+  }
+}
+
+
+/* Keep large images within the bounds of the post-width */
+.post-content img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* The author credit area after the post */
+.post-footer {
+  position: relative;
+  margin: 4rem 0 0 0;
+  padding: 4rem 0 0 0;
+  border-top: #EBF2F6 1px solid;
+  
+  h4 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  p {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 1.6em;
+  }
+  
+  /* Create some space to the right for the share links */
+  .author {
+    margin-right: 180px;
+  }
+
+  /* Drop the share links in the space to the right.
+     Doing it like this means it's easier for the author bio
+     to be flexible at smaller screen sizes while the share
+     links remain at a fixed width the whole time */
+  .share {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 140px;
+    
+    a {
+      font-size: 1.8rem;
+      display: inline-block;
+      margin: 1.4rem 1.6rem 1.6rem 0;
+      color: #BBC7CC;
+
+      &:hover {
+        color: #50585D;
+      }
+    }
+  }
+}
